@@ -3,7 +3,7 @@
     function clearAndFocus() {
       if(!!this.classList && !!this.classList.contains('active')) return false;
       var title = this;
-      var activ = d.querySelectorAll(".accordian-title.active");
+      var activ = d.querySelectorAll(".accordion-title.active");
       if(!!activ&&!!activ.length) for(var e in activ) {
         if(!activ[e].hasOwnProperty('classList')) continue;
         activ[e].classList.remove("active");
@@ -17,8 +17,8 @@
     }
     function initBindings() {
       Array.prototype.slice.call(
-        // Create Array from NodeList (accordian titles)
-        d.querySelectorAll(".accordian-title")
+        // Create Array from NodeList (accordion titles)
+        d.querySelectorAll(".accordion-title")
       ).forEach(function(title){
         // Loop through Each and Attach Handle
         title.addEventListener("click",clearAndFocus,false);
